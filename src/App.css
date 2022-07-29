@@ -1,10 +1,17 @@
-.App {
-  text-align: center;
+
+
+.mainText {
+  width:100%;
+  max-width: 100%;
+  height: calc(100vh - 100px);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.board {
+  position: relative;
+}
+
+.mainText:focus {
+  outline: none
 }
 
 @media (prefers-reduced-motion: no-preference) {
