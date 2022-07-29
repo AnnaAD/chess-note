@@ -18,10 +18,24 @@ export default function RenderArea(props) {
       if(match != null) {
         return (<ChessBoard pos = {match[1]}/>)
       } 
+
+      const re3 = 'bfen="([^"]*)"'
+      const match3 = e.match(re3)
+      if(match3 != null) {
+        return (<ChessBoard pos = {match[1]} view = "Black"/>)
+      } 
       const re2 = 'pgn="([^"]*)"'
       const match2 = e.match(re2)
       console.log(match2);
-      return (<GameBoard pgn = {match2[1]}/>);
+      if(match2 != null) {
+        return (<GameBoard pgn = {match2[1]}/>);
+      }
+      const re4 = 'bpgn="([^"]*)"'
+      const match4 = e.match(re4)
+      console.log(match4);
+      if(match4 != null) {
+        return (<GameBoard pgn = {match4[1]} view = "Black"/>);
+      }
     }
 
     return(<Typography m = {1} align="left">{e}</Typography>)

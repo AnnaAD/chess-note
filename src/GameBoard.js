@@ -55,7 +55,7 @@ export default function GameBoard(props) {
   return (
     
    <>
-   <ChessBoard pos = {fens[slide]}/>
+   <ChessBoard pos = {fens[slide]} view = {props.view}/>
    <Box p = {1} textAlign="center" width = {480*.6 - 15}>  <Button onClick = {prevSlide} variant = "contained"> <ArrowBackIosIcon/> </Button> <Button variant = "contained" onClick = {nextSlide}> <ArrowForwardIosIcon/> </Button>
 </Box>
    </>
